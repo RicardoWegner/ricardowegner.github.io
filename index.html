@@ -25,10 +25,12 @@
                data-target="#Trabalhos">
               Trabalhos
           </button>
-            <a href="#!"
+            <button href="#!"
+              data-toggle="modal"
+              data-target="#Contato"
                class="btn btn-success btn-shadow px-3 my-2 ml-0 ml-sm-1 text-left">
               Contato
-            </a>
+            </button>
           </div>
 
           <!-- <div class="text-darkgrey text-mono my-2">pensando em algo pra por aqui</div> -->
@@ -59,17 +61,54 @@
   </div>
 </div>
 <!-- Modal contato -->
-<div class="modal fade" id="Trabalhos" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+<div class="modal fade" id="Contato" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="Trabalhos">Meus trabalhos</h5>
+        <h5 class="modal-title" id="Trabalhos">Entre em contato</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Voltar">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div style="text-align: center;" class="modal-body ">
-        <h4>Parece que eu não tenho nenhum trabalho para mostrar ainda :(</h4>
+      <div class="modal-body ">
+        <form class="needs-validation">
+  
+          <div class="mb-3">
+            <label for="nome">Nome</label>
+            <div class="input-group">
+              <input type="text" class="form-control" id="nome" placeholder="Seu nome completo">
+              <div class="invalid-feedback" style="width: 100%;">
+                Você precisa dizer seu nome :)!
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="email">E-mail</label>
+            <div class="input-group">
+              <input type="text" class="form-control" id="email" placeholder="Seu e-mail" required>
+              <div class="invalid-feedback" style="width: 100%;">
+                Você precisa inserir um e-mail! =)
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="username">Escreva aqui</label>
+            <div class="input-group">
+              <textarea type="text" rows=""class="form-control" id="username" placeholder="Descreva o que você precisa" required></textarea>
+              <div class="invalid-feedback" style="width: 100%;">
+                Insira pelo menos um Bom dia!
+              </div>
+            </div>
+          </div>
+          
+          <hr class="mb-4">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="same-address">
+            <label class="custom-control-label" for="same-address">Deseja receber ofertas em seu e-mail?</label>
+          </div>
+          <hr class="mb-4">
+          <button class="btn btn-primary btn-lg btn-block" type="submit">Enviar</button>
+        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
